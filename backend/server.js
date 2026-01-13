@@ -14,6 +14,10 @@ app.use(express.json());
 
 connectDb();
 
+app.get('/', (req, res) =>{
+    res.json("this is the message")
+})
+
 app.post('/getData', async(req, res) =>{
    const {name, email, phone, msg} = req.body;
    try {
