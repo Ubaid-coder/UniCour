@@ -18,7 +18,7 @@ export const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch('http://localhost:4000/getData', {
+    const res = await fetch('https://uni-cour.vercel.app/getData', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
