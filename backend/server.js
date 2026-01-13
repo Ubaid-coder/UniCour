@@ -14,6 +14,7 @@ app.use(express.json());
 
 connectDb();
 
+
 app.get('/', (req, res) =>{
     res.json("this is the message")
 })
