@@ -21,9 +21,10 @@ app.get('/', (req, res) =>{
 app.post('/getData', async(req, res) =>{
    const {name, email, phone, msg} = req.body;
    try {
-    const userMessage = await User.create({
+    const userMessage = new User({
         name,email,phone,msg
     })
+    const user = await userMessage.save();
     console.log(userMessage);
     res.status(201).json({msg: 'Data Received'})
 
