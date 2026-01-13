@@ -14,8 +14,9 @@ app.use(express.json());
 
 connectDb();
 
-app.get('/', (req, res) =>{
-    connectDb();
+app.get('/', async (req, res) =>{
+    const data = await connectDb();
+console.log(data)
     res.json("this is the message")
 })
 
